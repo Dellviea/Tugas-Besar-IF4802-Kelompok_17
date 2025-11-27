@@ -32,7 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Dokter.h" />
+		<Unit filename="Dokter_103012400029.cpp" />
+		<Unit filename="Dokter_103012400260.cpp" />
+		<Unit filename="Dokter_103012400269.cpp" />
+		<Unit filename="Poli.h" />
+		<Unit filename="Poli_103012400029.cpp" />
+		<Unit filename="Poli_103012400260.cpp" />
+		<Unit filename="Poli_103012400269.cpp" />
+		<Unit filename="Relation.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="main_admin.cpp" />
+		<Unit filename="main_user.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
