@@ -1,37 +1,32 @@
 #ifndef DOKTER_H_INCLUDED
 #define DOKTER_H_INCLUDED
 
-#include <iostream>
+#include <string>
 using namespace std;
 
-struct Pasien {
-    string nama;
+struct DataPasien {
+    string idPasien;
+    string namaPasien;
     string tanggalKunjungan;
 };
 
-typedef struct ElmPasien *adrPasien;
-
 struct ElmPasien {
-    Pasien info;
-    adrPasien next;
+    DataPasien info;
+    ElmPasien *next;
 };
 
-struct Dokter {
-    string id;
-    string nama;
-    string spesialis;
-    adrPasien pasien;
+struct ListPasien {
+    ElmPasien *first;
 };
 
-typedef struct ElmDokter *adrDokter;
+void createListPasien(ListPasien &L);
+ElmPasien* allocatePasien(DataPasien data);
+bool isEmptyPasien(ListPasien L);
+void insertFirstPasien(ListPasien &L, ElmPasien *P);
+void insertLastPasien(ListPasien &L, ElmPasien *P);
+void deleteFirstPasien(ListPasien &L, ElmPasien *&P);
+void deleteLastPasien(ListPasien &L, ElmPasien *&P);
+ElmPasien* findPasienByID(ListPasien L, string id);
+void printPasien(ListPasien L);
 
-struct ElmDokter {
-    Dokter info;
-    adrDokter next;
-};
-
-struct ListDokter {
-    adrDokter first;
-};
-
-#endif // DOKTER_H_INCLUDED
+#endif 

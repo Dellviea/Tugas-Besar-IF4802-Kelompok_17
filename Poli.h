@@ -1,23 +1,37 @@
 #ifndef POLI_H_INCLUDED
 #define POLI_H_INCLUDED
 
-include <iostream>
+#include <string>
+#include "pasien.h"
 using namespace std;
 
-struct Poli {
-    string kode;
+struct DataPoli {
+    string idPoli;
     string namaPoli;
+    string lokasiPoli;
+    string idDokter;
+    string namaDokter;
+    string spesialis;
 };
 
-typedef struct ElmPoli *adrPoli;
-
 struct ElmPoli {
-    Poli info;
-    adrPoli next;
+    DataPoli info;
+    ElmPoli *next;
+    ListPasien pasien;
 };
 
 struct ListPoli {
-    adrPoli first;
+    ElmPoli *first;
 };
 
-#endif // POLI_H_INCLUDED
+void createListPoli(ListPoli &L);
+ElmPoli* allocatePoli(DataPoli data);
+bool isEmptyPoli(ListPoli L);
+void insertFirstPoli(ListPoli &L, ElmPoli *P);
+void insertLastPoli(ListPoli &L, ElmPoli *P);
+void deleteFirstPoli(ListPoli &L, ElmPoli *&P);
+void deleteLastPoli(ListPoli &L, ElmPoli *&P);
+ElmPoli* findPoliByID(ListPoli L, string id);
+void printPoli(ListPoli L);
+
+#endif
