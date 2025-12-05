@@ -14,6 +14,7 @@ struct DataPasien {
 struct ElmPasien {
     DataPasien info;
     adrPasien next;
+    adrPasien prev;
 };
 
 struct ListPasien {

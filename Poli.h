@@ -21,7 +21,6 @@ struct ElmPoli {
 
 struct ListPoli {
     adrPoli first;
-    adrPoli last;
 };
 
 void createListPoli(ListPoli &L);
