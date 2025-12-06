@@ -17,20 +17,14 @@ struct ElmPasien {
     adrPasien prev;
 };
 
-struct ListPasien {
-    adrPasien first;
-    adrPasien last;
-};
-
-void createListPasien(ListPasien &L);
 adrPasien allocatePasien(DataPasien data);
 bool isEmptyPasien(ListPasien L);
 void insertFirstPasien(ListPasien &L, adrPasien P);
 void insertLastPasien(ListPasien &L, adrPasien P);
+void insertAfterPasien(ListPasien &L, adrPasien Prec, adrPasien P);
 void deleteFirstPasien(ListPasien &L, adrPasien &P);
 void deleteLastPasien(ListPasien &L, adrPasien &P);
-adrPasien findPasienByID(ListPasien L, string id);
-void viewPasien(ListPasien L);
-int countPasien(ListPasien L);
+void deleteAfterPasien(ListPasien &L, adrPasien Prec, adrPasien &P);
+displayPasien(adrPasien P);
 
 #endif

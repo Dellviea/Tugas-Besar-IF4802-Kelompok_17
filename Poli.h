@@ -16,7 +16,7 @@ struct DataPoli {
 struct ElmPoli {
     DataPoli info;
     adrPoli next;
-    ListPasien pasien; 
+    adrPasien pasien; 
 };
 
 struct ListPoli {
@@ -28,11 +28,13 @@ adrPoli allocatePoli(DataPoli data);
 bool isEmptyPoli(ListPoli L);
 void insertFirstPoli(ListPoli &L, adrPoli P);
 void insertLastPoli(ListPoli &L, adrPoli P);
+void insertAfterPoli(ListPoli &L, adrPoli Prec, adrPoli P);
 void deleteFirstPoli(ListPoli &L, adrPoli &P);
 void deleteLastPoli(ListPoli &L, adrPoli &P);
+void deleteAfterPoli(ListPoli &L, adrPoli Prec, adrPoli &P);
+displayPasien(adrPasien P);
 adrPoli findPoliByID(ListPoli L, string id);
-void printPoli(ListPoli L);
 int hitungTotalPasien(ListPoli L);
-adrPoli searchByDokter(ListPoli L, string idDokter);
+
 
 #endif
