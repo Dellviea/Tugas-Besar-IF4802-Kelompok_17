@@ -1,8 +1,8 @@
-#include "pasien.h"
 #include <iostream>
+#include "header.h"
 using namespace std;
 
-adrPasien allocatePasien(DataPasien pasien) {
+adrPasien allocatePasien_103012400260(DataPasien pasien) {
     adrPasien P = new ElmPasien;
     P->info = pasien;
     P->next = nullptr;
@@ -10,15 +10,18 @@ adrPasien allocatePasien(DataPasien pasien) {
     return P;
 }
 
-bool isEmptyPasien_103012400260(ListPasien L) {
-    return L.first == nullptr;
+bool isEmptyPasien_103012400260(adrPasien firstPasien) {
+    return firstPasien == nullptr;
 }
 
-void displayPasien_103012400260(adrPasien P) {
+void displayPasien_103012400260(adrPasien firstPasien) {
+    adrPasien P = firstPasien;
     while (P != nullptr) {
-        cout << "ID: " << P->info.idPasien
-             << ", Nama: " << P->info.namaPasien
-             << ", Tanggal: " << P->info.tanggalKunjungan << endl;
+        cout << "ID: " << P->info.idPasien << endl;
+        cout << "Nama: " << P->info.namaPasien << endl;
+        cout << "Tanggal Kunjungan: " << P->info.tanggalKunjungan << endl;
+        cout << endl;
         P = P->next;
     }
 }
+
