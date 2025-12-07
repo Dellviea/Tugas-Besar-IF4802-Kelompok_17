@@ -17,14 +17,14 @@ struct ElmPasien {
     adrPasien prev;
 };
 
-adrPasien allocatePasien(DataPasien data);
-bool isEmptyPasien(ListPasien L);
+adrPasien allocatePasien_103012400260(DataPasien data);
+bool isEmptyPasien_103012400260(ListPasien L);
 void insertFirstPasien(ListPasien &L, adrPasien P);
 void insertLastPasien(ListPasien &L, adrPasien P);
 void insertAfterPasien(ListPasien &L, adrPasien Prec, adrPasien P);
 void deleteFirstPasien(ListPasien &L, adrPasien &P);
 void deleteLastPasien(ListPasien &L, adrPasien &P);
 void deleteAfterPasien(ListPasien &L, adrPasien Prec, adrPasien &P);
-displayPasien(adrPasien P);
+displayPasien_103012400260(adrPasien P);
 
 #endif

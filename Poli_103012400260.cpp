@@ -7,8 +7,16 @@ void createListPoli_103012400260(ListPoli &L) {
     L.last = nullptr;
 }
 
+adrPoli allocatePoli_103012400260(DataPoli poli) {
+    adrPoli P = new ElmPoli;
+    P->info = poli;
+    P->next = nullptr;
+    P->pasien = nullptr; 
+    return P;
+}
+
 bool isEmptyPoli_103012400260(ListPoli L) {
-    return (L.first == nullptr);
+    return L.first == nullptr;
 }
 
 void insertFirstPoli_103012400260(ListPoli &L, adrPoli P) {
@@ -18,19 +26,5 @@ void insertFirstPoli_103012400260(ListPoli &L, adrPoli P) {
     } else {
         P->next = L.first;
         L.first = P;
-    }
-}
-
-
-void printPoli_103012400260(ListPoli L) {
-    adrPoli P = L.first;
-    while (P != nullptr) {
-        cout << "Poli ID: " << P->info.idPoli << ", Nama: " << P->info.namaPoli
-             << ", Lokasi: " << P->info.lokasiPoli << endl;
-        cout << "Dokter: " << P->info.namaDokter << " (" << P->info.spesialis << ")" << endl;
-        cout << "Daftar Pasien:" << endl;
-        viewPasien(P->pasien);
-        cout << endl;
-        P = P->next;
     }
 }

@@ -23,10 +23,10 @@ struct ListPoli {
     adrPoli first;
 };
 
-void createListPoli(ListPoli &L);
-adrPoli allocatePoli(DataPoli data);
-bool isEmptyPoli(ListPoli L);
-void insertFirstPoli(ListPoli &L, adrPoli P);
+void createListPoli_103012400260(ListPoli &L);
+adrPoli allocatePoli_103012400260(DataPoli data);
+bool isEmptyPoli_103012400260(ListPoli L);
+void insertFirstPoli_103012400260(ListPoli &L, adrPoli P);
 void insertLastPoli(ListPoli &L, adrPoli P);
 void insertAfterPoli(ListPoli &L, adrPoli Prec, adrPoli P);
 void deleteFirstPoli(ListPoli &L, adrPoli &P);
