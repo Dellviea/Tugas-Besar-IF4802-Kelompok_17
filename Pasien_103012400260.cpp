@@ -24,4 +24,3 @@ void displayPasien_103012400260(adrPasien firstPasien) {
         P = P->next;
     }
 }
-
