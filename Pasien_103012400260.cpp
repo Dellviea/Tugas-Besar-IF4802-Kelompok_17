@@ -24,3 +24,15 @@ void displayPasien_103012400260(adrPasien firstPasien) {
         P = P->next;
     }
 }
+
+
+adrPasien findElementPasien(ListPasien L, string namaPasien){
+    adrPasien P = L.first;
+    while (P != nullptr) {
+        if (P->info.namaPasien == namaPasien) {
+            return P;
+        }
+        P = P->next;
+    }
+    return nullptr;
+}

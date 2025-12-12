@@ -26,3 +26,15 @@ void insertFirstPoli_103012400260(ListPoli &L, adrPoli P) {
         L.first = P;
     }
 }
+
+adrPoli findElementPoliByName(ListPoli L, string namaPoli) {
+    adrPoli P = L.first;
+    while (P != nullptr) {
+        if (P->info.namaPoli == namaPoli) {
+            return P;
+        }
+        P = P->next;
+    }
+    return nullptr;
+}
+
