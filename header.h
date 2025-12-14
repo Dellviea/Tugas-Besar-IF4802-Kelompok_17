@@ -49,8 +49,9 @@ void insertAfterPasien_103012400029(adrPasien Prec, adrPasien P);
 void deleteFirstPasien_103012400269(adrPasien &firstPasien, adrPasien &P);
 void deleteLastPasien_103012400269(adrPasien &firstPasien, adrPasien &P);
 void deleteAfterPasien_103012400269(adrPasien Prec, adrPasien &P);
-adrPasien findElementPasien(ListPasien L, string namaPasien);
+adrPasien findElementPasien_103012400260(ListPasien L, string namaPasien);
 void displayPasien_103012400260(adrPasien firstPasien);
+
 
 void createListPoli_103012400260(ListPoli &L);
 adrPoli allocatePoli_103012400260(DataPoli data);
@@ -61,8 +62,10 @@ void insertAfterPoli_103012400029(adrPoli Prec, adrPoli P);
 void deleteFirstPoli_103012400029(ListPoli &L, adrPoli &P);
 void deleteLastPoli_103012400269(ListPoli &L, adrPoli &P);
 void deleteAfterPoli_103012400269(adrPoli Prec, adrPoli &P);
-adrPoli findElementPoliByName(ListPoli L, string namaPoli);
+adrPoli findElementPoliByName_103012400260(ListPoli L, string namaPoli);
 void displayPoli_103012400269(ListPoli L);
+int countPasienPoli_103012400260(adrPasien firstPasien);
+int totalPasien_103012400260(ListPoli L);
 
 void main_admin();
 void main_user();

@@ -27,7 +27,7 @@ void insertFirstPoli_103012400260(ListPoli &L, adrPoli P) {
     }
 }
 
-adrPoli findElementPoliByName(ListPoli L, string namaPoli) {
+adrPoli findElementPoliByName_103012400260(ListPoli L, string namaPoli) {
     adrPoli P = L.first;
     while (P != nullptr) {
         if (P->info.namaPoli == namaPoli) {
@@ -38,3 +38,22 @@ adrPoli findElementPoliByName(ListPoli L, string namaPoli) {
     return nullptr;
 }
 
+int countPasienPoli_103012400260(adrPasien firstPasien) {
+    int count = 0;
+    adrPasien P = firstPasien;
+    while (P != nullptr) {
+        count++;
+        P = P->next;
+    }
+    return count;
+}
+
+int totalPasien_103012400260(ListPoli L) {
+    int total = 0;
+    adrPoli P = L.first;
+    while (P != nullptr) {
+        total += countPasienPoli_103012400260(P->firstPasien);
+        P = P->next;
+    }
+    return total;
+}

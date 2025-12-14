@@ -1,35 +1,27 @@
+#include "header.h"
 #include <iostream>
-
 using namespace std;
 
-int main()
-{
-
-void menuAdmin();
-void menuUser();
-
 int main() {
+    ListPoli L;
+    createListPoli_103012400260(L);
+
     int pilih;
     do {
-        cout << "\n=== MENU UTAMA ===\n";
-        cout << "1. Login Admin\n";
-        cout << "2. Login User\n";
+        cout << "\n=== SISTEM KLINIK ===\n";
+        cout << "1. Admin\n";
+        cout << "2. User\n";
         cout << "0. Keluar\n";
-        cout << "Pilih: "; cin >> pilih;
+        cout << "Pilih: ";
+        cin >> pilih;
 
-        switch (pilih) {
-            case 1:
-                menuAdmin();
-                break;
-            case 2:
-                menuUser();
-                break;
-            case 0:
-                cout << "Keluar program.\n";
-                break;
-            default:
-                cout << "Pilihan salah! Coba lagi.\n";
+        if (pilih == 1) {
+            main_admin(L);
         }
+        else if (pilih == 2) {
+            main_user(L);
+        }
+
     } while (pilih != 0);
 
     return 0;

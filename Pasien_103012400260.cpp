@@ -26,7 +26,7 @@ void displayPasien_103012400260(adrPasien firstPasien) {
 }
 
 
-adrPasien findElementPasien(ListPasien L, string namaPasien){
+adrPasien findElementPasien_103012400260(ListPasien L, string namaPasien){
     adrPasien P = L.first;
     while (P != nullptr) {
         if (P->info.namaPasien == namaPasien) {
@@ -36,3 +36,5 @@ adrPasien findElementPasien(ListPasien L, string namaPasien){
     }
     return nullptr;
 }
+
+
