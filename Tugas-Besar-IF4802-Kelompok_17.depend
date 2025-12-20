@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1765125629 source:e:\code\project\tugas-besar-if4802-kelompok_17\poli_103012400029.cpp
+	"header.h"
+	<iostream>
+
+1765726260 e:\code\project\tugas-besar-if4802-kelompok_17\header.h
+	<iostream>
+
+1765125429 source:e:\code\project\tugas-besar-if4802-kelompok_17\poli_103012400269.cpp
+	<iostream>
+	"header.h"
+
