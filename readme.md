@@ -1,68 +1,67 @@
-# Clinic Management System – Multi Linked List (C++)
-This program is a **Data Structures Final Project** that implements a  
-**Multi Linked List** to model a **Clinic Management System**  
-(Polyclinic – Doctor – Patient).
+# 🏥 Sistem Poli Klinik – Multi Linked List (C++)
+Program ini merupakan **Tugas Besar Struktur Data** yang mengimplementasikan  **Multi Linked List** untuk memodelkan sistem **Klinik** (Poli – Dokter – Pasien).
 
 ---
-## Case Study
-A clinic system consists of:
-- Multiple **Polyclinics**
-- Each polyclinic has a **Doctor**
-- Each polyclinic can serve **many Patients**
+## 📌 Studi Kasus
+Sistem klinik memiliki:
+- Beberapa **Poli**
+- Setiap poli memiliki **Dokter**
+- Setiap poli dapat memiliki **banyak Pasien**
 
-Data structure used:
-- **Polyclinic** → parent (Single Linked List)
-- **Patient** → child (Double Linked List)
-
----
-## Data Structure Design
-### Polyclinic (Parent)
-- Implemented using a **Single Linked List**
-- Stores:
-  - Polyclinic ID
-  - Polyclinic Name
-  - Doctor ID
-  - Doctor Name
-- Each polyclinic has a pointer to its patient list
-
-### Patient (Child)
-- Implemented using a **Double Linked List**
-- Stores:
-  - Patient ID
-  - Patient Name
-  - Visit Date
+Struktur data yang digunakan:
+- **Poli** -> parent (Single Linked List)
+- **Pasien** -> child (Double Linked List)
 
 ---
-## Program Features
-### Basic ADT Operations
-- Node allocation
-- Insert operations:
-  - Insert First
-  - Insert Last
-  - Insert After
-- Delete operations:
-  - Delete First
-  - Delete Last
-  - Delete After
-- Search (find element)
-- Display data
+## 🧩 Struktur Data
+### 🔹 Poli (Parent)
+- Single Linked List
+- Menyimpan:
+  - ID Poli
+  - Nama Poli
+  - ID Dokter
+  - Nama Dokter
+- Memiliki pointer ke list pasien
+
+### 🔹 Pasien (Child)
+- Double Linked List
+- Menyimpan:
+  - ID Pasien
+  - Nama Pasien
+  - Tanggal Kunjungan
 
 ---
-### Admin Menu
-- Manage polyclinics (insert & delete first/last/after)
-- Manage patients in each polyclinic
-- Perform technical data structure operations
-- Generate statistical reports
+## Fitur - fitur pada Program
+### Operasi Dasar (ADT)
+- Alokasi node
+- Insert:
+  - First
+  - Last
+  - After
+- Delete:
+  - First
+  - Last
+  - After
+- Pencarian data (find element)
+- Menampilkan data
 
 ---
-### User Menu
-- View all polyclinics
-- View polyclinic details (doctor & patients)
-- Search patient data
-- View reports
+### Menu Admin
+- Kelola Poli (insert & delete first/last/after)
+- Kelola Pasien pada Poli
+- Operasi teknis struktur data
+- Laporan statistik
+
+### Menu User
+- Melihat semua poli
+- Melihat detail poli (dokter & pasien)
+- Mencari pasien
+- Melihat laporan
 
 ---
-### Reports & Computation
-- Number of patients per polyclinic
-- Total number of patients in all polyclinics
 
+### Laporan & Komputasi
+- Jumlah pasien per poli
+- Total pasien seluruh poli
+
+---
