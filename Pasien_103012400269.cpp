@@ -37,5 +37,5 @@ void deleteAfterPasien_103012400269(adrPasien Prec, adrPasien &P) {
             P->next->prev = Prec;
         P->next = nullptr;
         P->prev = nullptr;
-    }
+    }  
 }

@@ -29,3 +29,13 @@ void deleteFirstPoli_103012400029(ListPoli &L, adrPoli &P) {
         P->next = nullptr;
     }
 }
+
+int totalPasien_103012400029(ListPoli L) {
+    int total = 0;
+    adrPoli P = L.first;
+    while (P != nullptr) {
+        total += countPasienPoli_103012400269(P->firstPasien);
+        P = P->next;
+    }
+    return total;
+}

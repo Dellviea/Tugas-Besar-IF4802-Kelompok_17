@@ -29,11 +29,20 @@ void deleteAfterPoli_103012400269(adrPoli Prec, adrPoli &P) {
 void displayPoli_103012400269(ListPoli L) {
     adrPoli P = L.first;
     while (P != nullptr) {
-        cout << "\n====================================\n";
         cout << "POLI: " << P->info.namaPoli << endl;
         cout << "Dokter: " << P->info.namaDokter << endl;
         cout << "Daftar Pasien:" << endl;
         displayPasien_103012400260(P->firstPasien);
         P = P->next;
     }
+}
+
+int countPasienPoli_103012400269(adrPasien firstPasien) {
+    int count = 0;
+    adrPasien P = firstPasien;
+    while (P != nullptr) {
+        count++;
+        P = P->next;
+    }
+    return count;
 }

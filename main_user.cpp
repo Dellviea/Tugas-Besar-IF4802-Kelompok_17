@@ -17,28 +17,46 @@ void main_user(ListPoli &L) {
         if (pilih == 1) {
             displayPoli_103012400269(L);
         }
+
         else if (pilih == 2) {
-            string nama;
-            cout << "Nama Poli: "; cin >> nama;
-            adrPoli P = findElementPoliByName_103012400260(L, nama);
-            if (P) {
+            string namaPoli;
+            cout << "Nama Poli: ";
+            cin >> namaPoli;
+
+            adrPoli P = findElementPoliByName_103012400260(L, namaPoli);
+
+            if (P != nullptr) {
                 cout << "Dokter: " << P->info.namaDokter << endl;
                 displayPasien_103012400260(P->firstPasien);
+            } else {
+                cout << "Poli tidak ditemukan\n";
             }
         }
+
         else if (pilih == 3) {
             string cari;
-            cout << "Nama Pasien: "; cin >> cari;
+            cout << "Nama Pasien: ";
+            cin >> cari;
+
             adrPoli P = L.first;
-            while (P) {
-                ListPasien LP{P->firstPasien};
+            bool ketemu = false;
+
+            while (P != nullptr && !ketemu) {
+                ListPasien LP;
+                LP.first = P->firstPasien;
+
                 adrPasien Q = findElementPasien_103012400260(LP, cari);
-                if (Q) {
+
+                if (Q != nullptr) {
                     cout << "Pasien ditemukan di Poli "
                          << P->info.namaPoli << endl;
-                    break;
+                    ketemu = true;
                 }
                 P = P->next;
+            }
+
+            if (!ketemu) {
+                cout << "Pasien tidak ditemukan\n";
             }
         }
 

@@ -64,10 +64,11 @@ void deleteLastPoli_103012400269(ListPoli &L, adrPoli &P);
 void deleteAfterPoli_103012400269(adrPoli Prec, adrPoli &P);
 adrPoli findElementPoliByName_103012400260(ListPoli L, string namaPoli);
 void displayPoli_103012400269(ListPoli L);
-int countPasienPoli_103012400260(adrPasien firstPasien);
-int totalPasien_103012400260(ListPoli L);
+int countPasienPoli_103012400269(adrPasien firstPasien);
+int totalPasien_103012400029(ListPoli L);
 
-void main_admin();
-void main_user();
+
+void main_admin(ListPoli &L);
+void main_user(ListPoli &L);
 
 #endif // HEADER_H_INCLUDED
