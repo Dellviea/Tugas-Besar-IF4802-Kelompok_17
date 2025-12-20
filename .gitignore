@@ -1,0 +1,12 @@
+# Folder build
+bin/
+obj/
+
+# File executable dan object
+*.exe
+*.o
+
+# IDE files
+*.cbp
+*.layout
+*.depend
