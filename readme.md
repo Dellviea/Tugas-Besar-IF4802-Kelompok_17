@@ -1,8 +1,8 @@
-# 🏥 Sistem Poli Klinik – Multi Linked List (C++)
+# Sistem Poli Klinik – Multi Linked List (C++)
 Program ini merupakan **Tugas Besar Struktur Data** yang mengimplementasikan  **Multi Linked List** untuk memodelkan sistem **Klinik** (Poli – Dokter – Pasien).
 
 ---
-## 📌 Studi Kasus
+## Studi Kasus
 Sistem klinik memiliki:
 - Beberapa **Poli**
 - Setiap poli memiliki **Dokter**
@@ -13,8 +13,8 @@ Struktur data yang digunakan:
 - **Pasien** -> child (Double Linked List)
 
 ---
-## 🧩 Struktur Data
-### 🔹 Poli (Parent)
+## Struktur Data
+### Poli (Parent)
 - Single Linked List
 - Menyimpan:
   - ID Poli
@@ -23,7 +23,7 @@ Struktur data yang digunakan:
   - Nama Dokter
 - Memiliki pointer ke list pasien
 
-### 🔹 Pasien (Child)
+### Pasien (Child)
 - Double Linked List
 - Menyimpan:
   - ID Pasien
